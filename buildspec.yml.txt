@@ -5,6 +5,10 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - echo Node.js version: `node -v`
+      - echo npm version: `npm -v`
+      - echo Clearing npm cache...
+      - npm cache clean --force
       - echo Installing source NPM dependencies...
       - npm install
   build:
