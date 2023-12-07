@@ -2,20 +2,12 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - echo Node.js version: `node -v`
-      - echo npm version: `npm -v`
-      - echo Clearing npm cache...
-      - npm cache clean --force
       - echo Installing source NPM dependencies...
-      - npm install
   build:
     commands:
       - echo Build started on `date`
-      - echo Compiling the Node.js code...
-      - npm run build
+      - echo Compiling the HTML code...
   post_build:
     commands:
       - echo Build completed on `date`
